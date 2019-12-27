@@ -1,0 +1,50 @@
+<html>
+  <head></head>
+  <body>
+    <!-- <h1 id="message">TE PEGUEI, OTÁRIO!</h1> -->
+
+    <img src="./monitor-1.jpg" />
+
+    <audio id="audio" controls>
+      <source src="gemidao-do-whatsapp.mp3" type="audio/mpeg">
+    </audio>
+  </body>
+</html>
+
+<script type="text/javascript">
+  const audio = document.getElementById('audio');
+
+  const event = () => {
+    audio.volume = 0.5;
+    audio.play();
+
+    document.removeEventListener('mousemove', event, false);
+  }
+
+  document.addEventListener('mousemove', event, false);
+</script>
+
+<style>
+  html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  img {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  h1 {
+    color: red;
+    font-size: 72px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
